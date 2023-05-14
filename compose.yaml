@@ -1,5 +1,18 @@
-name: vanilla-python
+name: flask-blog
 services:
-  app:
-    build:
-      context: .
+  web:
+    build: 
+      context: ./services/app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    depends_on:
+      - db
+  db:
+    build: 
+      context: ./services/db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: test
