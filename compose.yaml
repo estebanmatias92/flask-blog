@@ -2,7 +2,7 @@ name: flask-blog
 services:
   web:
     build: 
-      context: ./services/app
+      context: ./app
     ports:
       - "5000:5000"
     environment:
@@ -11,7 +11,7 @@ services:
       - db
   db:
     build: 
-      context: ./services/db
+      context: ./db
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: 1234
