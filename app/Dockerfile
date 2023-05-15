@@ -33,10 +33,10 @@ RUN pip install --user --no-cache-dir -r requirements.txt
 #
 FROM devdeps AS development
 # Modifyble through cli args
-ARG WORKDIR=/com.docker.devenvironments.code
+ARG WORKDIR=/com.docker.devenvironments.code/app
 ARG USER="vscode"
 # Set environment vars
-ENV WORKDIR=$WORKDIR
+ENV APPDIR=$WORKDIR
 # Create and change user
 RUN useradd -s /bin/bash -m $USER \
     && groupadd docker \
@@ -47,7 +47,7 @@ COPY --chown=$USER *.sh $WORKDIR/
 # Replace the host SSH exe with the WSL distro SSH exe
 RUN git config --global --replace-all core.sshCommand "/usr/bin/ssh"
 # Add scripts to .bashrc
-RUN echo "\n# Add scripts for dev workflow\n. ${WORKDIR}/script.sh" >> $HOME/.bashrc 
+RUN echo "\n# Add scripts for dev workflow\n. ${APPDIR}/script.sh" >> $HOME/.bashrc 
 # Keep the container alive
 CMD ["sleep", "infinity"]
 
