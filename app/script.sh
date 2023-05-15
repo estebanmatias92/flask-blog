@@ -5,6 +5,8 @@
 # Set virtual environment path and venv/bin path
 VENVPATH="${APPDIR}/${VENV}"
 BINPATH="${VENVPATH}/bin"
+# Updating the PATH with project's-specific bin folders
+#export PATH=$HOME/.local/bin:$PATH
 
 # Automate the VENV path folder and environment creation
 create_env() {
