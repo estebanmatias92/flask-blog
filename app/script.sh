@@ -4,6 +4,7 @@
 #export APPDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 # Set virtual environment path
 VENVPATH="${APPDIR}/${VENV}"
+export FLASK_APP="${APPDIR}/src/app.py"
 # Updating the PATH with project's-specific bin folders
 export PATH=$HOME/.local/bin:$VENVPATH/bin:$PATH
 
