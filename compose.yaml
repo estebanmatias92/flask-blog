@@ -2,16 +2,14 @@ name: flask-blog
 services:
   web:
     build: 
-      context: ./app
+      context: app
     ports:
       - "5000:5000"
     environment:
       - FLASK_ENV=production
     depends_on:
-      - db
+      db:
+        condition: service_healthy
   db:
     build: 
-      context: ./db
-    # TO DO
-    # Need to change to .env 
-    env_file: ./db/.env.dev
+      context: db
