@@ -16,6 +16,7 @@ create_env() {
 
 # Call the envrionment (For dev scripts only)
 activate_env() {
+    echo "Activating virtual envrionment"
    . ${BINPATH}/activate
 }
 
@@ -33,6 +34,6 @@ if [ ! -d "${VENVPATH}" ]; then
 fi
 
 # If the VENV has been created but it is not activated, activate it
-if  [ -d "${VENVPATH}" ] && [ -z "${VIRTUAL_ENV}" ]; then
+if  [ -d "${VENVPATH}" ]; then
     activate_env
 fi
