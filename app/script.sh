@@ -16,7 +16,7 @@ create_env() {
 
 # Call the envrionment (For dev scripts only)
 activate_env() {
-   . "${BINPATH}/activate"
+   . ${BINPATH}/activate
 }
 
 # Use entrypoint.sh to run the app with whatever command you need
