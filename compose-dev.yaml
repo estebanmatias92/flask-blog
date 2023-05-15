@@ -12,7 +12,6 @@ services:
   db:
     build: 
       context: ./db
-    environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: test
+    # TO DO
+    # Need to change to .env
+    env_file: ./db/.env.dev
