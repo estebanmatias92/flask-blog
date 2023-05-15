@@ -45,7 +45,7 @@ COPY --chown=$USER *.sh $WORKDIR/
 # Replace the host SSH exe with the WSL distro SSH exe
 RUN git config --global --replace-all core.sshCommand "/usr/bin/ssh"
 # Add scripts to .bashrc
-RUN echo "\n# Add scripts for dev workflow\n. '${WORKDIR}/script.sh'" >> $HOME/.bashrc 
+RUN echo "\n# Add scripts for dev workflow\n. ${WORKDIR}/script.sh" >> $HOME/.bashrc 
 # Keep the container alive
 CMD ["sleep", "infinity"]
 
