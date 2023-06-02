@@ -22,7 +22,7 @@
     //"python.formatting.autopep8Path": "${workspaceFolder}/venv/bin/autopep8",
     //"python.formatting.autopep8Args": ["--max-line-length", "80", "--experimental"],
     
-    "python.formatting.blackPath": "${workspaceFolder}/venv/bin/black",
+    "python.formatting.blackPath": "${workspaceFolder}/app/venv/bin/black",
     "python.formatting.blackArgs": ["--line-length", "80"],
     
     //"python.formatting.yapfPath": "${workspaceFolder}/venv/bin/yapf",
