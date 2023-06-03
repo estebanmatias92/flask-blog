@@ -2,6 +2,8 @@
 
 # Re-export the VIRTUAL_ENV var
 export VIRTUAL_ENV="${APPDIR}/venv"
+# Add the VENV bin folder to PATH
+export PATH="${VIRTUAL_ENV}/bin:${PATH}"
 
 # Use entrypoint.sh to run the app with whatever command you need
 run() {
