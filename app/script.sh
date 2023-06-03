@@ -7,7 +7,7 @@ export PATH="${VIRTUAL_ENV}/bin:${PATH}"
 
 # Use entrypoint.sh to run the app with whatever command you need
 run() {
-    (. $VIRTUAL_ENV/bin/activate; ${APPDIR}/entrypoint.sh)
+    ${APPDIR}/entrypoint.sh
 }
 
 # Create the VENV if doesn't exists
