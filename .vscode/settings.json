@@ -1,35 +1,25 @@
 {
-    // Editor
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-    // Language/Files specific settings
-	"[dockercompose]": {
-		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
-	},
+    "python.defaultInterpreterPath": "${workspaceFolder}/app/venv/bin/python",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "${workspaceFolder}/app/venv/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "80"
+    ],
+    "python.formatting.autopep8Path": "${workspaceFolder}/app/venv/bin/autopep8",
+    //"python.formatting.autopep8Args": ["--max-line-length", "80", "--experimental"],
+    //"python.formatting.yapfPath": "${workspaceFolder}/app/venv/bin/yapf",
+    //"python.formatting.yapfArgs": ["--max-line-length", "80"],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    //"python.linting.mypyEnabled": true,
+    "editor.formatOnSave": true,
     "[python]": {
-        //"editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.formatOnPaste": false,
         "editor.formatOnSaveMode": "file"
     },
-
-    // Set defaultFormatter to "ms-python.python" to change the provider to "autopep8" 
-    // or "black".
-    // Or set the provider to "none" to change the default.Formatter to "ms-pytho.black-formatter"
-    "python.formatting.provider": "black",
-    //"python.formatting.provider": "none",
-    
-    //"python.formatting.autopep8Path": "${workspaceFolder}/venv/bin/autopep8",
-    //"python.formatting.autopep8Args": ["--max-line-length", "80", "--experimental"],
-    
-    "python.formatting.blackPath": "${workspaceFolder}/app/venv/bin/black",
-    "python.formatting.blackArgs": ["--line-length", "80"],
-    
-    //"python.formatting.yapfPath": "${workspaceFolder}/venv/bin/yapf",
-    //"python.formatting.yapfArgs": ["--max-line-length", "80"],
-    
-
+    //"python.testing.pytestPath": "${workspaceFolder}/app/venv/bin/pytest",
+    //"python.testing.pytestEnabled": true
     // Extensions
     "prettier.tabWidth": 4,
-	"prettier.useTabs": true
+    "prettier.useTabs": true
 }
