@@ -4,3 +4,4 @@ pycodestyle
 black
 autopep8
 flask
+flask-sqlalchemy
