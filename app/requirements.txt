@@ -5,3 +5,4 @@ black
 autopep8
 flask
 flask-sqlalchemy
+psycopg2
