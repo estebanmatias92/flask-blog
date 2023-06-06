@@ -5,14 +5,15 @@ class User(db.Model):
     """User model for the blog user's accounts
 
     Args:
-        db (SQLAlchemy): This model inherits from the SQLAlchemy module
+        db (SQLAlchemy): This model inherits from the SQLAlchemy Model
     """
+    __tablename__ = "users"
 
     id = db.Column(db.Integer, primary_key=True)
-    nombre = db.Column(db.String(50), nullable=False)
+    name = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(80), nullable=False)
-    es_admin = db.Column(db.Boolean, default=False)
+    is_admin = db.Column(db.Boolean, default=False)
 
-    posts = db.relationship("Post", backref="user", lazy=True)
-    comments = db.relationship("Comment", backref="user", lazy=True)
+    posts = db.relationship("Post", backref="users", lazy=True)
+    comments = db.relationship("Comment", backref="users", lazy=True)
