@@ -5,6 +5,7 @@ services:
       context: app
       target: development
     env_file: 
+      - .env
       - ./app/.env.dev
     stop_signal: SIGINT
     ports:
@@ -15,4 +16,5 @@ services:
     build: 
       context: db
     env_file: 
+      - .env
       - ./db/.env.dev
