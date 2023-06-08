@@ -5,10 +5,11 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 def configure_db(app: Flask):
-    """_summary_
+    """Settings for the ORM module to configure itself.
+    Shares the configuration to the APP context also.
 
     Args:
-        app (Flask): _description_
+        app (Flask): Uses the APP context
     """
     
     # Settings
@@ -20,10 +21,10 @@ def configure_db(app: Flask):
 
 
 def init_db(app: Flask):
-    """_summary_
+    """Creates all the tables if not exist
 
     Args:
-        app (Flask): _description_
+        app (Flask): Uses the APP context
     """
     # Create the database schema before anything
     with app.app_context():
