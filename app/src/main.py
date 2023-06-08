@@ -1,6 +1,6 @@
 from flask import Flask
 from utils.db import configure_db
-from models import User
+from models import *
 from routes import posts
 
 # Create the app

@@ -16,5 +16,5 @@ class User(Base):
     password = db.Column(db.String(80), nullable=False)
     is_admin = db.Column(db.Boolean, default=False)
 
-    posts = db.relationship("Post", backref="users", lazy=True)
-    comments = db.relationship("Comment", backref="users", lazy=True)
+    posts = db.relationship("Post", backref="user", lazy=True)
+    comments = db.relationship("Comment", backref="user", lazy=True)
