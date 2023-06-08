@@ -1,7 +1,8 @@
 from utils.db import db
+from base import Base
 
 
-class User(db.Model):
+class User(Base):
     """User model for the blog user's accounts
 
     Args:
